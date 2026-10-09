@@ -1,0 +1,12 @@
+P0.13 PW8 validation
+
+PASS Password policy updated to 5-8 characters across backend and active frontend forms.
+PASS First-admin setup uses minLength=5 and maxLength=8.
+PASS New-user form uses minLength=5 and maxLength=8.
+PASS My Account password change uses minLength=5 and maxLength=8.
+PASS Admin reset prompt describes 5-8 characters.
+PASS Security regression expectations updated for minimum 5 / maximum 8.
+PASS 59 TS/TSX files transpiled with 0 syntax diagnostics.
+PASS Protected MediaMTX/FFmpeg/CameraPlayer hashes unchanged.
+
+Compatibility: existing migrated passwords longer than 8 characters remain valid for login until changed.

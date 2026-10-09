@@ -1,0 +1,21 @@
+CCTV Monitor P0.11 release packaging verification
+=================================================
+
+Source-level checks completed in packaging environment:
+[PASS] Protected media baseline hash verification (3/3 unchanged)
+[PASS] Role/access/security regression checks
+[PASS] MediaMTX security configuration regression check
+[PASS] Reliability/access-control invariants
+[PASS] RTSP/migration/credential foundation checks
+[PASS] TypeScript/TSX syntax transpilation: 45 files, 0 diagnostics
+[PASS] Relative TypeScript imports: 0 unresolved
+
+Not executable in this packaging environment:
+[NOT RUN] npm ci / full tsc --noEmit / Vite production build (npm registry/package cache unavailable)
+[NOT RUN] Windows DirectShow USB hardware regression
+[NOT RUN] Tenda CP3 Pro physical RTSP connection
+[NOT RUN] tablet/Tailscale remote live-view test
+[NOT RUN] router/camera/MediaMTX recovery test
+[NOT RUN] 8–24 hour USB + RTSP soak test
+
+Run QUALIFY-P0.11.cmd on the Windows CCTV PC and complete the manual gates before advancing to P0.13 recording/NVR work.

@@ -1,0 +1,24 @@
+CCTV Monitor P0.16 Complete Build
+
+INCLUDED
+- Full frontend/backend source
+- Schema migrations through v11
+- Recording/retention/motion/notifications/mobile features through P0.15
+- P0.16 local AI repository/service/API/UI
+- Model downloader and SHA-256 verifier
+- AI runtime repair helper
+- Windows first-run/verification/qualification scripts
+- Protected baseline manifests
+
+NOT BUNDLED
+- .env
+- SQLite database
+- credential key
+- node_modules
+- runtime logs
+- camera credentials
+- SMTP password
+- ONNX model binary (downloaded and hash-verified on the CCTV PC)
+
+OPTIONAL NATIVE DEPENDENCY
+- onnxruntime-node 1.30.0

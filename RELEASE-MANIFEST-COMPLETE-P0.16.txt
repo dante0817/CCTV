@@ -1,0 +1,7 @@
+Release: CCTV Monitor P0.16 Complete
+Version: 0.2.0-p0.16-pw8
+Database schema: v11
+Password policy for new/changed passwords: 5–8 characters
+AI default: disabled
+AI scope: local person/vehicle object classification only; no face recognition/identity matching
+Protected media baseline: mediamtx.yml, FfmpegService.ts, CameraPlayer.tsx unchanged

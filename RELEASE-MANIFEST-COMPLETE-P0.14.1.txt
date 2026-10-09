@@ -1,0 +1,16 @@
+CCTV Monitor P0.14.1 - Complete Standalone Release
+
+Includes the full application through:
+P0.11   USB + RTSP/Tenda-ready live architecture
+P0.11.1 runtime stability and diagnostics
+P0.11.2 operational events
+P0.12   persistent sessions and audit hardening
+P0.13   continuous USB recording MVP
+P0.13.1 recording management and safe retention
+P0.14   motion detection and event-linked recordings
+P0.14.1 motion snapshots, rectangular zones, and event review
+
+Fresh install: FIRST-RUN-P0.14.1.cmd
+Normal startup: START-CCTV-MONITOR.cmd
+Verification: VERIFY-P0.14.1-COMPLETE.cmd
+Hardware qualification: QUALIFY-P0.14.1.cmd

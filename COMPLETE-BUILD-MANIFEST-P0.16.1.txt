@@ -1,0 +1,20 @@
+CCTV MONITOR P0.16.1 COMPLETE BUILD
+
+Version: 0.2.0-p0.16.1-pw8
+Runtime health API version: 0.16.1
+Database schema: 12
+Base: P0.16 complete
+
+New milestone scope:
+- AI tuning profiles
+- per-class thresholds
+- motion-gated / motion-zone-scoped AI
+- pause/resume
+- overload backoff and AI health metrics
+- persisted AI event review / feedback statistics
+- labeled bounding-box browser overlay
+- AI event ACL hardening
+
+AI remains local-only and disabled by default.
+No face recognition / identity matching is included.
+Protected live-media baseline remains unchanged.

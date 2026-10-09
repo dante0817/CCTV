@@ -1,0 +1,22 @@
+CCTV Monitor P0.14.3 code-level validation
+
+PASS protected MediaMTX/FfmpegService/CameraPlayer baseline
+PASS P0.13 recording foundation regression
+PASS P0.13.1 safe-retention regression
+PASS P0.14 motion/event-link regression
+PASS P0.14.1 motion zones/snapshots/review regression
+PASS P0.14.2 local notification regression
+PASS P0.14.3 schema-v10/email-queue/retry/encrypted-SMTP foundation
+PASS narrowed TypeScript type-check of new server email modules
+PASS 68 TS/TSX files transpiled with 0 syntax diagnostics
+PASS 58 application source files checked with 0 missing relative imports
+PASS native SMTP transport against local fake SMTP server (AUTH PLAIN + DATA)
+PASS package privacy scan: no .env, cctv.db, .credential-key, node_modules or runtime logs
+
+Requires Windows/site qualification:
+- npm run check / npm run test / npm run build with the installed dependency tree
+- real SMTP provider direct TLS/STARTTLS authentication and certificate validation
+- real recipient delivery/spam filtering
+- retry behavior during real internet/provider outage
+- queue recovery across process restart
+- USB camera/live/recording/motion regression on the CCTV PC

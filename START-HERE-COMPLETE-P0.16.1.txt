@@ -1,0 +1,21 @@
+CCTV MONITOR P0.16.1 — COMPLETE PACKAGE
+
+Fresh install:
+  FIRST-RUN-P0.16.1.cmd
+
+Normal start:
+  START-CCTV-MONITOR.cmd
+
+Software verification:
+  VERIFY-P0.16.1-COMPLETE.cmd
+
+Real USB / AI qualification:
+  QUALIFY-P0.16.1.cmd
+
+AI model retry:
+  INSTALL-AI-MODEL-P0.16.1.cmd
+
+AI runtime repair:
+  REPAIR-AI-RUNTIME-P0.16.1.cmd
+
+AI remains disabled by default. P0.16.1 performs local person/vehicle detection only; it does not perform face recognition or identity matching.

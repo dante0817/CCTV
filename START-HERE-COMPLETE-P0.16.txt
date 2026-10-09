@@ -1,0 +1,16 @@
+CCTV MONITOR P0.16 COMPLETE
+
+1. Extract to a NEW folder.
+2. Open PowerShell in the folder.
+3. Run: .\FIRST-RUN-P0.16.cmd
+4. Open http://localhost:3000
+5. Confirm normal USB live view first.
+6. Admin > Cameras > select the USB camera > AI Person / Vehicle Detection.
+7. AI is OFF by default. Enable only after Diagnostics shows the AI model/runtime are ready.
+8. Recommended initial settings: confidence 55%, sample every 5 s, cooldown 30 s.
+9. Run .\QUALIFY-P0.16.cmd for the real-hardware checklist.
+
+If the model is missing, run .\INSTALL-AI-MODEL-P0.16.cmd.
+If ONNX Runtime is unavailable, run .\REPAIR-AI-RUNTIME-P0.16.cmd.
+
+P0.16 performs local object classification only. It does not identify people or recognize faces.

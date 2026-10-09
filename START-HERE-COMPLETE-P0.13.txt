@@ -1,0 +1,56 @@
+CCTV MONITOR P0.13 — COMPLETE FRESH-INSTALL PACKAGE
+====================================================
+
+P0.13 includes the full P0.12 application plus the Continuous USB Recording MVP.
+
+FIRST INSTALL
+-------------
+1. Extract this ZIP into a NEW folder.
+2. Open PowerShell in that folder.
+3. Run:
+
+     .\FIRST-RUN-P0.13.cmd
+
+The first-run script creates .env if needed, installs dependencies, runs TypeScript checks,
+all regression tests, the production build and setup preflight, then starts CCTV Monitor.
+
+NORMAL START
+------------
+
+     .\START-CCTV-MONITOR.cmd
+
+Open http://localhost:3000 if the browser does not open automatically.
+
+UPGRADING WITH EXISTING DATA
+----------------------------
+You may copy these from a verified prior installation BEFORE first P0.13 startup:
+
+  .env
+  data\
+  data\.credential-key
+  package-lock.json   (optional; npm will synchronize it if package metadata changed)
+
+Back up data\ first. Database migration to schema v5 is automatic.
+Do NOT copy an old node_modules folder into a fresh installation.
+
+RECORDING MVP
+-------------
+- Admin can arm Continuous Recording for USB cameras.
+- The physical USB camera is opened only by the existing live capture worker.
+- The recorder reads the normalized H.264 stream from loopback MediaMTX and writes MP4 segments.
+- Default segment target: 60 seconds (CCTV_RECORDING_SEGMENT_SECONDS, supported 30–3600).
+- Default storage root: data\recordings\ (override with CCTV_RECORDINGS_DIR).
+- Playback requires an authenticated session and Recording Access for that camera.
+- Admin has recording management/download permission; Viewer receives only explicitly assigned recording access.
+- Automatic retention/deletion is intentionally disabled.
+
+QUALIFICATION
+-------------
+After the application is running:
+
+     .\QUALIFY-P0.13.cmd
+
+Verify at least two finalized segments, browser seeking/playback, graceful stop, app restart resume,
+USB unplug/replug recovery, Viewer ACL behavior, actual storage accounting and clean Ctrl+C shutdown.
+
+P0.13 is USB-recording-only. RTSP/Tenda live support remains present, but network-camera recording is deferred until physical hardware qualification.

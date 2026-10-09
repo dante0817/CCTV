@@ -1,0 +1,6 @@
+{
+  "name": "CCTV Monitor P0.15 - Tablet/Phone Viewer UX & Remote CCTV Polish",
+  "description": "Private CCTV monitor with protected live media, continuous recording, retention, motion zones/snapshots/review, persistent sessions, operational events, and configurable notification rules with in-app/browser alerts plus queued SMTP email delivery and retry history.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

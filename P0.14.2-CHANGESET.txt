@@ -1,0 +1,12 @@
+P0.14.2 adds:
+- schema v9 notification_rules + notifications
+- NotificationRepository + NotificationService
+- OperationalEventService subscriber hook
+- Admin Notifications page
+- notification rule APIs and client bindings
+- sidebar/header notification badge and popover
+- optional browser desktop notifications
+- P0.14.2 migration/regression test
+- first-run/verify/qualification scripts and release docs
+
+Protected live-media files are unchanged.

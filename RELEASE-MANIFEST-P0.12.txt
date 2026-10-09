@@ -1,0 +1,17 @@
+CCTV Monitor P0.12 — Release Manifest
+
+Release: P0.12 Security, Sessions & Audit Hardening
+Package version: 0.2.0-p0.12
+Database schema: v4
+Protected media baseline: BASELINE-P0.12.sha256
+
+Core additions:
+- Persistent SHA-256-hashed sessions
+- Session/user security-version-bound media authorization
+- User/Admin session revocation
+- 12-character minimum for new/changed passwords
+- Per-user AI grants
+- Sanitized/filterable Audit log
+- Security regression test and qualification script
+
+Intentionally deferred: recording/NVR, motion, PTZ/audio, physical Tenda qualification.

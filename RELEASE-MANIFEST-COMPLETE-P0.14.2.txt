@@ -1,0 +1,7 @@
+Release: CCTV Monitor P0.14.2 Complete
+Version: 0.2.0-p0.14.2-pw8
+Schema: v9
+Password policy for new/changed passwords: 5–8 characters
+Notifications: local in-app inbox + optional browser desktop popups
+External email/SMS/webhook delivery: deferred
+Protected live-media baseline: BASELINE-P0.14.2.sha256

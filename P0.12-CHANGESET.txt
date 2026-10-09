@@ -1,0 +1,39 @@
+P0.12 CHANGESET
+
+Changed/new files: 35
+
+BASELINE-P0.12.md
+BASELINE-P0.12.sha256
+CHANGELOG-P0.12.md
+IMPLEMENTATION-STATUS-P0.12.md
+QUALIFY-P0.12.cmd
+README.md
+START HERE.txt
+START-HERE-P0.12.txt
+VALIDATION-P0.12.txt
+metadata.json
+package.json
+scripts/qualify-p0.12.ps1
+scripts/run-production.ps1
+scripts/test-p0.12-security.ts
+scripts/test-reliability.ts
+scripts/test-security.ts
+scripts/verify-baseline.mjs
+server.ts
+src/App.tsx
+src/api.ts
+src/components/account/AccountView.tsx
+src/components/audit/AuditView.tsx
+src/components/auth/LoginView.tsx
+src/components/layout/Header.tsx
+src/components/layout/Sidebar.tsx
+src/components/sessions/SessionsView.tsx
+src/components/settings/SettingsView.tsx
+src/components/users/UsersView.tsx
+src/security/permissions.ts
+src/server/repositories/AuditRepository.ts
+src/server/repositories/AuthRepository.ts
+src/server/repositories/CameraRepository.ts
+src/server/repositories/SessionRepository.ts
+src/server/services/AuthService.ts
+src/types/cctv.ts

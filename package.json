@@ -1,0 +1,68 @@
+{
+  "name": "cctv-monitor-local",
+  "private": true,
+  "version": "0.2.0-p0.16.1-pw8",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build:frontend": "vite build",
+    "build:server": "vite build --config vite.server.config.ts",
+    "build": "npm run build:frontend && npm run build:server",
+    "start": "node scripts/start-production.mjs",
+    "start:prod": "node scripts/start-production.mjs",
+    "preview": "vite preview",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true});require('fs').rmSync('dist-server',{recursive:true,force:true})\"",
+    "lint": "tsc --noEmit",
+    "check": "tsc --noEmit",
+    "test:security": "tsx scripts/test-security.ts",
+    "test:media-security": "tsx scripts/test-mediamtx-security.ts",
+    "test:reliability": "tsx scripts/test-reliability.ts",
+    "test:security:all": "npm run test:security && npm run test:media-security",
+    "test": "npm run check && npm run test:baseline && npm run test:security:all && npm run test:reliability && npm run test:rtsp && npm run test:p0111 && npm run test:p0112 && npm run test:p012 && npm run test:p013 && npm run test:p0131 && npm run test:p014 && npm run test:p0141 && npm run test:p0142 && npm run test:p0143 && npm run test:p015 && npm run test:p016 && npm run test:p0161",
+    "test:rtsp": "tsx scripts/test-rtsp-foundation.ts",
+    "test:baseline": "node scripts/verify-baseline.mjs",
+    "test:p0111": "tsx scripts/test-p0.11.1-foundation.ts",
+    "test:p0112": "tsx scripts/test-p0.11.2-events.ts",
+    "test:p012": "tsx scripts/test-p0.12-security.ts",
+    "test:p013": "node scripts/test-p0.13-recording.mjs",
+    "test:p0131": "node scripts/test-p0.13.1-recording-management.mjs",
+    "test:p014": "node scripts/test-p0.14-motion.mjs",
+    "test:p0141": "node scripts/test-p0.14.1-motion-review.mjs",
+    "test:p0142": "node scripts/test-p0.14.2-notifications.mjs",
+    "test:p0143": "node scripts/test-p0.14.3-email-delivery.mjs && tsx scripts/test-p0.14.3-smtp-transport.ts",
+    "test:p015": "node scripts/test-p0.15-mobile-viewer.mjs",
+    "test:p016": "node scripts/test-p0.16-ai.mjs",
+    "test:p0161": "node scripts/test-p0.16.1-ai-tuning.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "2.4.0",
+    "@tailwindcss/vite": "4.3.3",
+    "@vitejs/plugin-react": "6.1.1",
+    "dotenv": "17.2.3",
+    "express": "4.21.2",
+    "lucide-react": "0.546.0",
+    "motion": "12.23.24",
+    "react": "19.0.1",
+    "react-dom": "19.0.1",
+    "vite": "8.3.0",
+    "ws": "8.22.0",
+    "hls.js": "1.6.13"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.21",
+    "@types/node": "22.14.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/ws": "8.18.2",
+    "autoprefixer": "10.4.21",
+    "tailwindcss": "4.3.3",
+    "tsx": "4.21.0",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=22 <26"
+  },
+  "optionalDependencies": {
+    "onnxruntime-node": "1.30.0"
+  }
+}

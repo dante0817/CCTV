@@ -1,0 +1,36 @@
+CCTV Monitor P0.11 implemented changes
+======================================
+
+CORE
+- Preserved the P0.10 protected MediaMTX config, FfmpegService and CameraPlayer byte-for-byte.
+- Added an explicit USB/RTSP camera-source adapter layer.
+- Added generic RTSP source orchestration alongside existing USB DirectShow workers.
+- Added Tenda CP3 Pro RTSP preset and connection-test-before-save flow.
+- Added supervised RTSP restarts with backoff/jitter and independent per-camera workers.
+
+DATA / SECURITY
+- Added schema_migrations and camera_rtsp_config (schema version 2).
+- Added AES-256-GCM RTSP password encryption and data/.credential-key management.
+- Viewer camera responses redact address/protocol/source connection data.
+- MediaMTX authorization revalidates current user state and current camera ACL.
+
+UI / STATUS
+- Network camera modal now saves through the backend instead of a temporary frontend object.
+- Camera details show safe RTSP metadata to Admin only.
+- Dashboard uses real /api/v1/system/status data.
+- Storage shows actual host volume values and explicitly marks recording/retention not implemented.
+- Version/about/sidebar updated for P0.11.
+
+PACKAGING / TESTS
+- Dependency versions pinned exactly in package.json.
+- Launchers prefer npm ci when a package-lock.json exists.
+- Added P0.11 baseline verification, RTSP foundation test and Windows qualification checklist.
+- package-lock.json could not be generated in the packaging environment because npm registry access is unavailable; run npm install once on the connected CCTV development PC and retain the generated lockfile.
+
+DEFERRED UNTIL HARDWARE GATE PASSES
+- ONVIF discovery
+- PTZ command/control
+- audio/two-way intercom
+- recording/NVR and retention
+- motion/AI events
+- notifications

@@ -1,0 +1,27 @@
+CCTV Monitor P0.14.3 complete source package
+
+Included application lineage:
+P0.11 RTSP/Tenda-ready live architecture
+P0.11.1 runtime stability/diagnostics
+P0.11.2 Operational Events
+P0.12 persistent sessions/security/audit
+P0.13 continuous USB recording
+P0.13.1 recording management/safe retention
+P0.14 motion detection/event-linked recording
+P0.14.1 motion snapshots/zones/review
+P0.14.2 local notifications/alert rules
+P0.14.3 queued SMTP email delivery/retry history
+
+Fresh-install helpers:
+FIRST-RUN-P0.14.3.cmd
+VERIFY-P0.14.3-COMPLETE.cmd
+QUALIFY-P0.14.3.cmd
+START-HERE-COMPLETE-P0.14.3.txt
+
+Runtime-private files intentionally excluded:
+.env
+cctv.db
+.credential-key
+node_modules
+runtime logs
+recordings/snapshots

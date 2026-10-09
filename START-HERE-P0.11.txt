@@ -1,0 +1,19 @@
+CCTV MONITOR P0.11 — USB + RTSP / TENDA VIDEO FOUNDATION
+==========================================================
+
+1. Preserve your existing .env and data\ folder when upgrading.
+2. Also preserve data\.credential-key after P0.11 creates it. It decrypts stored RTSP camera passwords.
+3. Start with START-CCTV-MONITOR.cmd.
+4. Sign in as Admin.
+5. Open Cameras > Add Camera > Network / RTSP.
+6. For Tenda CP3 Pro select the Tenda preset, enter the camera IP and camera credentials, then click Test Connection.
+7. Add & Start becomes available only after the current settings pass the RTSP probe.
+8. Run QUALIFY-P0.11.cmd and complete the hardware gates before calling the release qualified.
+
+IMPORTANT
+---------
+- The existing USB -> FFmpeg -> MediaMTX -> WebRTC/HLS baseline is intentionally preserved.
+- RTSP passwords are encrypted before database storage and are not returned to Viewer APIs.
+- P0.11 implements live RTSP/Tenda video ingestion. ONVIF discovery, PTZ control, audio/intercom, recording, motion detection and notifications are not implemented yet.
+- Dashboard and Storage pages now report real status or explicitly say a feature is not implemented; fake storage/recording health values were removed.
+- If package-lock.json is absent, dependencies are still pinned to exact versions. On an internet-connected development PC run npm install once and keep the generated package-lock.json, then use npm ci for reproducible installs.

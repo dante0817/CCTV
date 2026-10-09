@@ -1,0 +1,7 @@
+Release: CCTV Monitor P0.15 Complete
+Focus: Tablet/Phone Viewer UX & Remote CCTV Polish
+Package version: 0.2.0-p0.15-pw8
+Server version: 0.15
+Password policy for new/changed passwords: 5–8 characters
+Database schema: v10
+Protected media baseline: unchanged

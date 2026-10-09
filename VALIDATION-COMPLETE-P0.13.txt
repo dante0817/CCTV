@@ -1,0 +1,38 @@
+CCTV MONITOR P0.13 COMPLETE PACKAGE — CODE-LEVEL VALIDATION
+===========================================================
+
+PASS P0.12 role/access/security regression
+PASS MediaMTX security configuration regression
+PASS P0.13 reliability/access-control invariants
+PASS P0.11 RTSP/migration/credential foundation
+PASS P0.11.1 runtime observability/stability foundation
+PASS P0.11.2 Operational Events regression
+PASS P0.12 persistent-session/security regression
+PASS P0.13 continuous-recording foundation/migration safety checks
+PASS protected MediaMTX / FfmpegService / CameraPlayer hashes
+PASS schema v5 SQL executed against a temporary node:sqlite database
+PASS crash-leftover exclusion, camera-delete recording-file safeguard and byte-range source invariants
+
+Static source validation in the packaging environment:
+- 52 TS/TSX files transpiled
+- 0 syntax diagnostics
+- 0 missing relative imports
+
+Privacy/package integrity:
+- no private .env bundled
+- no CCTV SQLite database bundled
+- no credential key bundled
+- no node_modules bundled
+
+NOT CLAIMED IN THIS PACKAGING ENVIRONMENT:
+- npm ci / full tsc --noEmit against the user's installed dependency tree
+- Vite production build on Windows
+- actual USB recording/MP4 finalization/playback with the physical webcam
+- long-duration recording soak test
+- RTSP/Tenda recording (outside P0.13 scope)
+
+Required on the CCTV Windows PC:
+1. FIRST-RUN-P0.13.cmd or VERIFY-P0.13-COMPLETE.cmd
+2. Start the application and verify existing live USB WebRTC/HLS
+3. QUALIFY-P0.13.cmd and complete every USB recording gate
+4. Keep automatic retention disabled until a later release qualifies safe deletion

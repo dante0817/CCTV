@@ -1,0 +1,38 @@
+CCTV Monitor P0.10 — role/access implementation changes
+
+Core backend
+- server.ts
+- src/security/permissions.ts
+- src/server/repositories/AuthRepository.ts
+- src/server/repositories/AuditRepository.ts
+- src/server/repositories/CameraRepository.ts
+- src/server/services/AuthService.ts
+- src/types/cctv.ts
+- src/api.ts
+
+Frontend
+- src/App.tsx
+- src/components/layout/Sidebar.tsx
+- src/components/layout/Header.tsx
+- src/components/live/LiveView.tsx
+- src/components/live/CameraPlayer.tsx
+- src/components/cameras/MyCamerasView.tsx
+- src/components/users/UsersView.tsx
+- src/components/users/CameraAccessView.tsx
+- src/components/account/AccountView.tsx
+- src/components/audit/AuditView.tsx
+- src/components/recordings/RecordingsView.tsx
+- src/data/mockData.ts
+
+Release / validation
+- package.json
+- CHANGELOG-P0.10.md
+- IMPLEMENTATION-STATUS-P0.10.md
+- START-HERE-P0.10.txt
+- BASELINE-P0.10.md
+- BASELINE-P0.10.sha256
+- QUALIFY-P0.10.cmd
+- scripts/qualify-p0.10.ps1
+- scripts/test-security.ts
+- scripts/test-reliability.ts
+- Windows production/autostart helper updates

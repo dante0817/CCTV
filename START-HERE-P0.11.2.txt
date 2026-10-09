@@ -1,0 +1,23 @@
+CCTV MONITOR P0.11.2 — OPERATIONAL EVENTS
+
+1. Keep the previous working folder as rollback.
+2. Copy your existing .env and data\ folder into this folder.
+3. If you use saved RTSP credentials, also preserve data\.credential-key.
+4. Open PowerShell in this folder.
+5. Stop any old CCTV/Vite/Node process before dependency maintenance.
+6. Run: npm ci
+7. Run: npm run check
+8. Run: npm run test
+9. Run: npm run build
+10. Run: .\CHECK-CCTV-SETUP.cmd
+11. Run: .\START-CCTV-MONITOR.cmd
+12. Open http://localhost:3000
+13. Confirm the USB camera is ONLINE and live view works.
+14. Open Events and confirm SYSTEM_STARTED / CAMERA_ONLINE are real persisted rows.
+15. Unplug the USB camera and verify one CAMERA_OFFLINE event.
+16. Reconnect it and verify one CAMERA_RECOVERED event.
+17. Restart CCTV Monitor and confirm previous events remain in Events.
+18. Run: .\QUALIFY-P0.11.2.cmd
+
+Operational Events and Audit Logs are intentionally separate.
+Recording/NVR remains deferred to P0.13.

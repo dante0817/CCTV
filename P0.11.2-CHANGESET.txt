@@ -1,0 +1,44 @@
+P0.11.2 CHANGESET — OPERATIONAL EVENTS
+
+NEW
+- src/server/repositories/OperationalEventRepository.ts
+- src/server/services/OperationalEventService.ts
+- scripts/test-p0.11.2-events.ts
+- scripts/qualify-p0.11.2.ps1
+- QUALIFY-P0.11.2.cmd
+- CHANGELOG-P0.11.2.md
+- IMPLEMENTATION-STATUS-P0.11.2.md
+- START-HERE-P0.11.2.txt
+- BASELINE-P0.11.2.md
+- BASELINE-P0.11.2.sha256
+- VALIDATION-P0.11.2.txt
+
+UPDATED
+- server.ts
+- src/server/repositories/CameraRepository.ts
+- src/server/services/CameraProcessManager.ts
+- src/types/cctv.ts
+- src/api.ts
+- src/App.tsx
+- src/components/events/EventsView.tsx
+- src/components/dashboard/DashboardView.tsx
+- src/components/layout/Header.tsx
+- src/components/layout/Sidebar.tsx
+- package.json
+- scripts/test-reliability.ts
+- scripts/test-rtsp-foundation.ts
+- scripts/test-p0.11.1-foundation.ts
+- scripts/verify-baseline.mjs
+- scripts/run-production.ps1
+- README.md
+- metadata.json
+- START HERE.txt
+
+INCLUDED FROM P0.11.1a HOTFIX
+- src/server/repositories/AuthRepository.ts strict node:sqlite row normalization
+- src/server/services/AuthService.ts Buffer|string base64url typing fix
+
+UNCHANGED PROTECTED MEDIA CORE
+- tools/mediamtx/mediamtx.yml
+- src/server/services/FfmpegService.ts
+- src/components/live/CameraPlayer.tsx

@@ -1,0 +1,18 @@
+CCTV Monitor P0.14.2 — Notifications & Motion Alert Rules
+
+FRESH INSTALL
+1. Extract to a new folder.
+2. Open PowerShell in that folder.
+3. Run: .\FIRST-RUN-P0.14.2.cmd
+4. Open http://localhost:3000 if the browser does not open automatically.
+
+NORMAL START
+.\START-CCTV-MONITOR.cmd
+
+VERIFY SOFTWARE
+.\VERIFY-P0.14.2-COMPLETE.cmd
+
+QUALIFY ALERTS
+.\QUALIFY-P0.14.2.cmd
+
+P0.14.2 adds a persistent in-app alert inbox, configurable event/camera/zone alert rules, severity filtering, cooldown suppression, unread/read state, and optional browser desktop notifications. Motion alerts are disabled by default on fresh installs.

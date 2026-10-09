@@ -1,0 +1,33 @@
+CCTV Monitor P0.12 — Complete Standalone Release Manifest
+
+Release: P0.12 Security, Sessions & Audit Hardening
+Package version: 0.2.0-p0.12
+Database schema: v4 after migration
+Protected media baseline: BASELINE-P0.12.sha256
+
+Fresh-install entry points:
+- FIRST-RUN-P0.12.cmd
+- VERIFY-P0.12-COMPLETE.cmd
+- START-CCTV-MONITOR.cmd
+- QUALIFY-P0.12.cmd
+
+Complete functional lineage included:
+- P0.11 camera architecture / RTSP-Tenda-ready software support
+- P0.11.1 runtime truth, recovery, system/storage status and diagnostics
+- P0.11.1a Node 24 type compatibility fixes
+- P0.11.2 persistent Operational Events
+- P0.12 persistent/revocable sessions, security versioning, per-user AI grants,
+  session-aware media authorization, sanitized/filterable Audit
+
+Runtime/private content intentionally not bundled:
+- .env
+- existing data database
+- data/.credential-key
+- node_modules
+- user/camera credentials
+
+Intentionally deferred:
+- Continuous recording/NVR (P0.13)
+- Playback/retention (P0.13.1)
+- Motion (P0.14)
+- PTZ/audio and physical Tenda qualification

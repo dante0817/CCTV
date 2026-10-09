@@ -1,0 +1,37 @@
+CCTV MONITOR P0.12 COMPLETE BUILD MANIFEST
+
+APPLICATION
+- package version: 0.2.0-p0.12
+- complete source package: yes
+- fresh-install first-run script: FIRST-RUN-P0.12.cmd
+- verification script: VERIFY-P0.12-COMPLETE.cmd
+- hardware/browser qualification: QUALIFY-P0.12.cmd
+
+INCLUDED FEATURE BASELINE
+- P0.11 USB + RTSP/Tenda-ready camera source architecture
+- P0.11.1 runtime state/recovery/status/storage/diagnostics
+- P0.11.1a Node 24 TypeScript fixes
+- P0.11.2 persistent Operational Events
+- P0.12 persistent hashed sessions, session management, security versioning,
+  per-user AI grants, security-aware stream authorization and hardened Audit
+
+PROTECTED MEDIA FILES
+- tools/mediamtx/mediamtx.yml
+- src/server/services/FfmpegService.ts
+- src/components/live/CameraPlayer.tsx
+
+RUNTIME DATA NOT INCLUDED
+- .env
+- SQLite database / existing data\ contents
+- data\.credential-key
+- node_modules
+- user credentials
+- camera credentials
+
+HARDWARE GATES REMAIN
+- Windows npm check/test/build
+- USB camera/WebRTC/HLS regression
+- multi-browser session revocation
+- server-restart session persistence
+- password-change/session invalidation
+- Viewer disable / ACL revocation

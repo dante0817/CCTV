@@ -1,0 +1,7 @@
+CCTV Monitor P0.16.1 complete standalone release
+Base: complete P0.16
+Database schema: v12
+Password policy: 5–8 characters for new/changed passwords
+AI: optional local Tiny YOLOv3 + ONNX Runtime, disabled by default
+Protected media baseline: unchanged
+Private runtime files intentionally excluded: .env, SQLite database, credential key, node_modules, runtime logs

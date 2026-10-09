@@ -1,0 +1,9 @@
+P0.14.1 CHANGESET
+=================
+- Schema v8: motion_zones + motion detection zone/snapshot fields + motion_event_reviews.
+- MotionService: whole-frame/zone analyzers, authenticated snapshot capture, review context, orphan cleanup.
+- OperationalEventService: zone-aware motion event title/metadata.
+- Server/API: zone CRUD, motion context, snapshot serving, event review.
+- Cameras UI: rectangular zone editor (percent coordinates, enable, sensitivity override).
+- Events UI: snapshot, zone/score details, review status/note, linked footage.
+- Package/test/qualification/version updates for P0.14.1.

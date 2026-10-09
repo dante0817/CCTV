@@ -1,0 +1,50 @@
+CCTV Monitor P0.16.1 validation
+
+PASS protected media SHA-256 baseline
+  tools/mediamtx/mediamtx.yml
+  src/server/services/FfmpegService.ts
+  src/components/live/CameraPlayer.tsx
+
+PASS inherited regressions
+  P0.13 continuous recording
+  P0.13.1 recording management / safe retention
+  P0.14 motion detection / event-linked recording
+  P0.14.1 motion snapshots / zones / review
+  P0.14.2 notification rules / inbox / cooldown
+  P0.14.3 queued email delivery
+  P0.15 responsive mobile Viewer
+  P0.16 local person/vehicle AI foundation
+
+PASS P0.16.1 regression
+  schema v12
+  performance profiles
+  separate person/vehicle thresholds
+  motion gating / zone scope
+  pause/resume
+  overload backoff / health metrics
+  AI review feedback
+  AI-event ACL hardening
+
+PASS targeted server TypeScript type-check
+  AiRepository.ts
+  MotionRepository.ts
+  AiDetectionService.ts
+
+PASS targeted UI/API TypeScript type-check with validation-only external-library shims
+  CamerasView.tsx
+  EventsView.tsx
+  api.ts
+  types/cctv.ts
+
+PASS 74 TS/TSX/config files transpile with 0 syntax diagnostics
+PASS 64 application source files checked with 0 missing relative imports
+PASS privacy scan: 0 .env/database/credential-key/node_modules/runtime-log artifacts
+
+Not physically qualified in this build environment:
+- actual Windows DirectShow USB camera
+- ONNX Runtime native binary on target Windows PC
+- real CPU/RAM load under simultaneous WebRTC + recording + motion + AI
+- nighttime/low-light accuracy
+- actual zone gating on the user's physical scene
+
+Run QUALIFY-P0.16.1.cmd on the CCTV PC after installation.

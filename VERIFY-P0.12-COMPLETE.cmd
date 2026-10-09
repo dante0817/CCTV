@@ -1,0 +1,27 @@
+@echo off
+setlocal
+cd /d "%~dp0"
+title CCTV Monitor P0.12 - Verification
+
+echo === CCTV Monitor P0.12 Complete Verification ===
+echo.
+call npm run check
+if errorlevel 1 goto :failed
+call npm run test
+if errorlevel 1 goto :failed
+call npm run build
+if errorlevel 1 goto :failed
+call CHECK-CCTV-SETUP.cmd
+if errorlevel 1 goto :failed
+
+echo.
+echo [PASS] P0.12 software verification completed.
+echo Run QUALIFY-P0.12.cmd for Windows/browser/hardware qualification.
+pause
+exit /b 0
+
+:failed
+echo.
+echo [FAIL] Verification failed. Review the output above.
+pause
+exit /b 1

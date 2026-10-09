@@ -1,0 +1,18 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# CCTV runtime state
+data/*.db
+data/*.db-shm
+data/*.db-wal
+tools/mediamtx/mediamtx.exe
+tools/mediamtx/mediamtx
+.cctv-cache/
+data/.credential-key
+data/recordings/

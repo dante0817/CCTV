@@ -1,0 +1,10 @@
+CCTV Monitor P0.15 Complete Build
+- Full source application included
+- Fresh-install and verification scripts included
+- No .env included
+- No CCTV database included
+- No credential key included
+- No node_modules included
+- No runtime logs included
+- Database schema remains v10
+- Protected media baseline: BASELINE-P0.15.sha256

@@ -1,0 +1,44 @@
+logLevel: info
+logDestinations: [stdout]
+
+# CCTV Monitor keeps the Control API on loopback only.
+api: true
+apiAddress: 127.0.0.1:9997
+
+# Media reads are authorized by the CCTV backend. Local RTSP publishing is
+# allowed by the backend auth endpoint; direct unauthenticated reads are denied.
+authMethod: http
+authHTTPAddress: http://127.0.0.1:3000/internal/mediamtx/auth
+authHTTPExclude:
+  - action: api
+  - action: metrics
+  - action: pprof
+
+# RTSP is local-only in this USB-camera release; FFmpeg publishes from the CCTV PC.
+rtsp: true
+rtspAddress: 127.0.0.1:8554
+rtspTransports: [tcp]
+
+webrtc: true
+webrtcAddress: :8889
+webrtcAllowOrigins: ['*']
+webrtcLocalUDPAddress: :8189
+webrtcIPsFromInterfaces: true
+
+# HLS is local-only and is exposed to browsers through the authenticated CCTV proxy.
+hls: true
+hlsAddress: 127.0.0.1:8888
+hlsAllowOrigins: ['*']
+# Low-Latency HLS is retained because it is known to work with the Android
+# remote-viewing path. A larger part target plus CFR encoder timing reduces
+# part-duration drift on variable-timestamp USB webcams.
+hlsVariant: lowLatency
+hlsSegmentDuration: 1s
+hlsPartDuration: 500ms
+
+pathDefaults:
+  source: publisher
+  overridePublisher: true
+
+paths:
+  all_others:

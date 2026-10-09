@@ -1,0 +1,15 @@
+P0.15 principal changes:
+- src/App.tsx
+- src/index.css
+- src/components/layout/Header.tsx
+- src/components/layout/Sidebar.tsx
+- src/components/live/LiveView.tsx
+- src/components/mobile/MobileNavigation.tsx
+- src/components/mobile/RemoteConnectionBadge.tsx
+- src/hooks/useMediaQuery.ts
+- src/hooks/useRemoteConnection.ts
+- responsive refinements in MyCamerasView, RecordingsView, AccountView
+- index.html mobile metadata
+- package/version/release scripts/docs
+
+Protected CameraPlayer / FfmpegService / MediaMTX config unchanged.

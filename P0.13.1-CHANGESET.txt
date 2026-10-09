@@ -1,0 +1,30 @@
+P0.13.1 CHANGESET — RECORDING MANAGEMENT & SAFE RETENTION
+
+Database:
+- Schema v6
+- recording_segments.is_protected
+- recording_retention_policy
+- recording_quarantine
+
+Backend:
+- protect/unprotect recording
+- individual/bulk deletion
+- safe path containment
+- reconciliation and MP4 health check
+- opt-in retention by age / maximum indexed bytes / minimum free disk
+- automatic retention supervisor (only when explicitly enabled)
+
+Frontend:
+- protected-only filter
+- protection lock controls
+- safe single/bulk delete
+- retention settings and manual run
+- reconcile/health counts
+- updated Storage view
+
+Tests/docs:
+- scripts/test-p0.13.1-recording-management.mjs
+- FIRST-RUN-P0.13.1.cmd
+- VERIFY-P0.13.1-COMPLETE.cmd
+- QUALIFY-P0.13.1.cmd
+- BASELINE-P0.13.1.md/.sha256

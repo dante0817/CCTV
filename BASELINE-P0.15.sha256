@@ -1,0 +1,3 @@
+6bef35620814d56c1ca480bfd3e03ed7bb736b0ed9fe5ce438af775e002be83f  tools/mediamtx/mediamtx.yml
+3f75e0211896577258aba2a8953012a0823bed87caee09515087459f31007ae4  src/server/services/FfmpegService.ts
+9542ec2a865de90024ff9c58e916d3784b62711c8b2a96997d0beddb749d93b3  src/components/live/CameraPlayer.tsx

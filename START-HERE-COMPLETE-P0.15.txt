@@ -1,0 +1,18 @@
+CCTV MONITOR P0.15 — COMPLETE STANDALONE BUILD
+================================================
+
+1. Extract this ZIP into a NEW folder.
+2. Open PowerShell or double-click:
+      FIRST-RUN-P0.15.cmd
+3. After a successful first run, normal startup is:
+      START-CCTV-MONITOR.cmd
+4. Open:
+      http://localhost:3000
+5. Software verification:
+      VERIFY-P0.15-COMPLETE.cmd
+6. Phone/tablet/Tailscale qualification:
+      QUALIFY-P0.15.cmd
+
+If upgrading with existing settings/data, back up your previous installation first and copy only the required runtime items such as .env and data\ into the new folder. Do not copy old node_modules.
+
+P0.15 does not change the recording database schema (still v10 from P0.14.3) and does not change the protected live-media pipeline.

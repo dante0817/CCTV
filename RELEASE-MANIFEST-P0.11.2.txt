@@ -1,0 +1,20 @@
+CCTV Monitor P0.11.2 — Release Manifest
+
+Primary start/read files:
+  START-HERE-P0.11.2.txt
+  START HERE.txt
+  README.md
+  CHANGELOG-P0.11.2.md
+  IMPLEMENTATION-STATUS-P0.11.2.md
+  VALIDATION-P0.11.2.txt
+  P0.11.2-CHANGESET.txt
+  BASELINE-P0.11.2.sha256
+  QUALIFY-P0.11.2.cmd
+
+Release focus:
+  Persistent transition-driven operational events.
+  Operational Events remain separate from Audit.
+  Protected USB/WebRTC/HLS media core unchanged.
+
+Hardware release gate:
+  Complete QUALIFY-P0.11.2.cmd on the Windows CCTV PC before freezing as known-good.

@@ -1,0 +1,14 @@
+P0.15 code-level validation
+===========================
+- P0.13 recording foundation: PASS
+- P0.13.1 safe retention: PASS
+- P0.14 motion/event link: PASS
+- P0.14.1 zones/snapshots/review: PASS
+- P0.14.2 notification inbox/rules: PASS
+- P0.14.3 queued email foundation: PASS
+- P0.15 mobile viewer regression: PASS
+- Protected MediaMTX/FfmpegService/CameraPlayer baseline: PASS
+- TypeScript/TSX transpile syntax scan: PASS (0 diagnostics)
+- Relative import scan: PASS (0 missing)
+
+Real phone/tablet/Tailscale behavior remains a hardware/browser qualification gate and is covered by QUALIFY-P0.15.cmd.

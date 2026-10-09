@@ -1,0 +1,32 @@
+P0.13 CHANGESET — CONTINUOUS USB RECORDING MVP
+==============================================
+
+New recording backend:
+- src/server/repositories/RecordingRepository.ts
+- src/server/services/RecordingService.ts
+- schema migration v5 / recording_segments
+- authenticated recording APIs and byte-range media delivery
+- internal MediaMTX recorder authorization
+
+Updated application surfaces:
+- real Recordings view/playback
+- Cameras continuous-recording controls
+- Dashboard recording status
+- Storage real recording bytes
+- Settings/Diagnostics recording capability
+- recording permissions, API client and shared types
+- operational recording events
+
+Release/qualification:
+- BASELINE-P0.13.md / .sha256
+- CHANGELOG-P0.13.md
+- IMPLEMENTATION-STATUS-P0.13.md
+- FIRST-RUN-P0.13.cmd
+- VERIFY-P0.13-COMPLETE.cmd
+- QUALIFY-P0.13.cmd
+- scripts/qualify-p0.13.ps1
+- scripts/test-p0.13-recording.mjs
+- START-HERE-COMPLETE-P0.13.txt
+- COMPLETE-BUILD-MANIFEST-P0.13.txt
+- RELEASE-MANIFEST-COMPLETE-P0.13.txt
+- VALIDATION-COMPLETE-P0.13.txt

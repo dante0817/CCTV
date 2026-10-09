@@ -1,0 +1,25 @@
+CCTV MONITOR P0.14 COMPLETE BUILD MANIFEST
+
+Release: P0.14 Motion Detection & Event-Linked Recording
+Package version: 0.2.0-p0.14-pw8
+Database schema: v7
+Protected baseline: BASELINE-P0.14.sha256
+Password policy for new/changed passwords: 5–8 characters
+
+Included inherited capabilities:
+- USB live capture and WebRTC/HLS
+- Generic RTSP/Tenda-ready software path
+- runtime stability/diagnostics
+- operational events
+- persistent sessions/security/audit
+- continuous USB recording
+- recording management/protection/reconciliation
+- opt-in safe retention
+
+P0.14 additions:
+- USB scene-change motion analyzer
+- per-camera sensitivity/cooldown/link windows
+- MOTION_DETECTED operational events
+- motion event ↔ finalized recording links
+- linked-footage playback from Events
+- motion diagnostics

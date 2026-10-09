@@ -1,0 +1,9 @@
+P0.16 local object-detection model
+
+Model: tiny-yolov3-11.onnx
+Repository: onnxmodelzoo/tiny-yolov3-11 (Hugging Face mirror of the historical ONNX Model Zoo)
+Expected file size: approximately 35.5 MB
+Expected SHA-256: f715cc2d99740d22d312777e20d9de2b2ecdc250155be8fd3752ce7e8b823521
+Repository license label: Apache-2.0. Original Tiny YOLOv3 attribution/publication also applies.
+
+The model is downloaded only by the explicit installer/first-run workflow and is verified by SHA-256 before CCTV Monitor uses it.

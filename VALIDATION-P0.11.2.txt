@@ -1,0 +1,37 @@
+CCTV Monitor P0.11.2 — Validation Report
+
+CODE-LEVEL CHECKS COMPLETED IN BUILD ENVIRONMENT
+[PASS] Protected media baseline SHA-256 verification
+[PASS] TypeScript/TSX syntax transpilation: 52 files, 0 syntax diagnostics
+[PASS] Relative import resolution scan: 0 missing relative imports
+[PASS] P0.11 role/access/security regression
+[PASS] MediaMTX security configuration regression
+[PASS] P0.11.2 reliability/access-control source invariants
+[PASS] RTSP credential/migration foundation (schema v3)
+[PASS] Existing schema v2 -> v3 migration test
+[PASS] P0.11.1 MediaMTX list-based readiness regression
+[PASS] P0.11.2 operational events repository/service test
+[PASS] Repeated same-state OFFLINE observation does not duplicate CAMERA_OFFLINE
+[PASS] Recovery through STARTING after a prior outage produces CAMERA_RECOVERED
+[PASS] Intentional WORKER_STOPPED restart does not masquerade as outage/recovery
+[PASS] MediaMTX outage/recovery events are transition-driven
+[PASS] Event acknowledgement persists
+[PASS] Events and acknowledgement survive repository reopen/application restart
+
+PROTECTED MEDIA HASHES
+6bef35620814d56c1ca480bfd3e03ed7bb736b0ed9fe5ce438af775e002be83f  tools/mediamtx/mediamtx.yml
+3f75e0211896577258aba2a8953012a0823bed87caee09515087459f31007ae4  src/server/services/FfmpegService.ts
+9542ec2a865de90024ff9c58e916d3784b62711c8b2a96997d0beddb749d93b3  src/components/live/CameraPlayer.tsx
+
+NOT CLAIMED IN THIS ENVIRONMENT
+- Full npm ci / npm run check / npm run build with the project's installed dependency tree.
+- Windows DirectShow hardware behavior.
+- Physical USB unplug/replug event qualification.
+- Tailscale/browser hardware qualification.
+
+Run on the actual CCTV PC:
+  npm ci
+  npm run check
+  npm run test
+  npm run build
+  .\QUALIFY-P0.11.2.cmd
